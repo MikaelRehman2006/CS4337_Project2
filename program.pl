@@ -55,3 +55,19 @@ valid_maze(Maze) :-
     valid_symbols(Maze),
     valid_row_lengths(Maze),
     exactly_one_start(Maze).
+
+find_start(Maze, R, C) :-
+    find_all_starts(Maze, [(R,C)]).
+
+in_bounds(Maze, R, C) :-
+    R >= 0,
+    C >= 0,
+    length(Maze, NumRows),
+    R < NumRows,
+    nth0(0, Maze, FirstRow),
+    length(FirstRow, NumCols),
+    C < NumCols.
+
+passable_cell(Maze, R, C) :-
+    cell(Maze, R, C, Value),
+    Value \= w.
