@@ -16,3 +16,10 @@ So for this session I am looking to focus on locating where the start position i
 
 Nov 25: 5:44 pm
 This session was great, I was able top finish the components that are needed to locate and move from the start of the maze. I also implemented find_start/3 to return the coordinates of the single start cell and added in_bounds/3 which basically confirms that a coordinate lies inside the maze. Next I added passable_cell/3 which makes sure that we do not ever step into a wall. These predicates are forming the core foundation to simulate movement, and I will use them directly when I have to implement the action-following in the next session. So overall this session went smoothly and the structure of the maze logic is solid.
+
+Nov 26: 11:30pm
+In this session I am hoping to implement the logic for following a list of actions that are though the maze. This is going to allow prolog to simulate the movement step by step and check bounds and walls. This functionality will be needed for verifying a given action list in fint_exit/2. The main work would be writing a recursive predicate that processes each action and updates the current position.
+(I forgot to push the devlog for pre session thoughts)
+
+Nov 27 12:25 am (same session, just went to the next day because of the time)
+So in this session I was able to implement the entirely of the logic for following a list of actions through the maze. The follow_actions/6 predicate now updates the position step by step and it also checks both bounds and walls using the helper predicates I made from the earlier sessions. This completes the movement simulation that is needed to verify an action list. The only remaining piece I need for the verification mode is checking whether the final position is an exit, which I will add in the next session when I start working on find_exit/2.

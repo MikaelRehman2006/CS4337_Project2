@@ -71,3 +71,19 @@ in_bounds(Maze, R, C) :-
 passable_cell(Maze, R, C) :-
     cell(Maze, R, C, Value),
     Value \= w.
+
+
+
+follow_actions(_, R, C, [], R, C).
+
+follow_actions(Maze, R, C, [A|Rest], Rf, Cf) :-
+   
+    move(R, C, A, R2, C2),
+   
+    in_bounds(Maze, R2, C2),
+
+    passable_cell(Maze, R2, C2),
+
+    follow_actions(Maze, R2, C2, Rest, Rf, Cf).
+
+
