@@ -26,3 +26,6 @@ So in this session I was able to implement the entirely of the logic for followi
 
 Nov 25 8:45 pm
 During this session I am looking to complete the verification mode of find_exit/2. I already do have all of the pieces to simulate the movement, so for now the only remaining tasks is just adding the is_exit/3 predicate and also integrating pretty much everything into a full find_exit/2 that would be able to verify a action list. The goal is for Prolog to succeed only if the maze is valid, the actions are legal, and the final position is an exit. This should be a straightforward combination of earlier work.
+
+Nov 25 9:15pm
+In this session all I did was add the is_exit/3 predicate, and i also completed the verficiation mode of find_exit/2, which allowed the program to check a maze, then follow a given action list, and lastly confirm the final cell is an exit.

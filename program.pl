@@ -87,3 +87,14 @@ follow_actions(Maze, R, C, [A|Rest], Rf, Cf) :-
     follow_actions(Maze, R2, C2, Rest, Rf, Cf).
 
 
+
+is_exit(Maze, R, C) :-
+    cell(Maze, R, C, e).
+
+
+find_exit(Maze, Actions) :-
+    nonvar(Actions),                
+    valid_maze(Maze),               
+    find_start(Maze, R, C),         
+    follow_actions(Maze, R, C, Actions, Rf, Cf),  
+    is_exit(Maze, Rf, Cf).         
