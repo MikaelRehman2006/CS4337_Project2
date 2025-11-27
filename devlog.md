@@ -32,3 +32,7 @@ In this session all I did was add the is_exit/3 predicate, and i also completed 
 
 Nov 25: 10:05 pm
 In this session I want to focus on adding the search mode for find_exit/2, where prolog must automatically generate a list of valid actions that is leading from the start to the exit. I will need to implement something like a DFS style search that would explore moves, avoids walls, stays in bounds, and tracks visited positions to prevent loops. The DFS should be kind of brute force in a way, I will figure it out during the code. This is the most complex part I feel like, but I do have helper predicates I made earlier to make it a little more easier.
+
+Nov 25: 11:22pm
+
+So in this session I was able to add the DFS based search more so that the find_exit/2 was able to automatically generate a list of actions leading from the start to the end. I did this by used recursion, legal actions, bounds checking and a visited list to prevent any loops. This completes the core maze solving functionality.

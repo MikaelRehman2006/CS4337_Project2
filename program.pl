@@ -98,3 +98,28 @@ find_exit(Maze, Actions) :-
     find_start(Maze, R, C),         
     follow_actions(Maze, R, C, Actions, Rf, Cf),  
     is_exit(Maze, Rf, Cf).         
+
+    
+legal_action(up).
+legal_action(down).
+legal_action(left).
+legal_action(right).
+
+
+dfs(Maze, R, C, _, []) :-
+    is_exit(Maze, R, C).
+
+dfs(Maze, R, C, Visited, [A|Rest]) :-
+    legal_action(A),
+    move(R, C, A, R2, C2),
+    in_bounds(Maze, R2, C2),
+    passable_cell(Maze, R2, C2),
+    \+ member((R2,C2), Visited),       
+    dfs(Maze, R2, C2, [(R2,C2)|Visited], Rest).
+
+
+find_exit(Maze, Actions) :-
+    var(Actions),                      
+    valid_maze(Maze),
+    find_start(Maze, R, C),
+    dfs(Maze, R, C, [(R,C)], Actions).
