@@ -24,19 +24,23 @@ In this session I am hoping to implement the logic for following a list of actio
 Nov 26 12:25 am (same session, just went to the next day because of the time)
 So in this session I was able to implement the entirely of the logic for following a list of actions through the maze. The follow_actions/6 predicate now updates the position step by step and it also checks both bounds and walls using the helper predicates I made from the earlier sessions. This completes the movement simulation that is needed to verify an action list. The only remaining piece I need for the verification mode is checking whether the final position is an exit, which I will add in the next session when I start working on find_exit/2.
 
-Nov 25 8:45 pm
+Nov 26 8:45 pm
 During this session I am looking to complete the verification mode of find_exit/2. I already do have all of the pieces to simulate the movement, so for now the only remaining tasks is just adding the is_exit/3 predicate and also integrating pretty much everything into a full find_exit/2 that would be able to verify a action list. The goal is for Prolog to succeed only if the maze is valid, the actions are legal, and the final position is an exit. This should be a straightforward combination of earlier work.
 
-Nov 25 9:15pm
+Nov 26 9:15pm
 In this session all I did was add the is_exit/3 predicate, and i also completed the verficiation mode of find_exit/2, which allowed the program to check a maze, then follow a given action list, and lastly confirm the final cell is an exit.
 
-Nov 25: 10:05 pm
+Nov 26: 10:05 pm
 In this session I want to focus on adding the search mode for find_exit/2, where prolog must automatically generate a list of valid actions that is leading from the start to the exit. I will need to implement something like a DFS style search that would explore moves, avoids walls, stays in bounds, and tracks visited positions to prevent loops. The DFS should be kind of brute force in a way, I will figure it out during the code. This is the most complex part I feel like, but I do have helper predicates I made earlier to make it a little more easier.
 
-Nov 25: 11:22pm
+Nov 26: 11:22pm
 
 So in this session I was able to add the DFS based search more so that the find_exit/2 was able to automatically generate a list of actions leading from the start to the end. I did this by used recursion, legal actions, bounds checking and a visited list to prevent any loops. This completes the core maze solving functionality.
 
-Nov 25: 12:00 am
+Nov 27: 12:00 am
 
 not many inital thoughts, but what I am looking to do is focus on extensive testing using both the predefined example mazes and the randomly generated mazes from test.pl. nsive testing using both the predefined example mazes and the randomly generated mazes from test.pl. The goal is to confirm that both verification and search modes of find_exit/2 behave exactly as expected across valid, invalid, and edge-case mazes.
+
+Nov 27: 12:53 am
+
+Finished up testing, seems to be working fine, ill do a final checkup next session. After that I will submit if I find no errors or missing requirements.
