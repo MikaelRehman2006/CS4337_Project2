@@ -36,3 +36,7 @@ In this session I want to focus on adding the search mode for find_exit/2, where
 Nov 25: 11:22pm
 
 So in this session I was able to add the DFS based search more so that the find_exit/2 was able to automatically generate a list of actions leading from the start to the end. I did this by used recursion, legal actions, bounds checking and a visited list to prevent any loops. This completes the core maze solving functionality.
+
+Nov 25: 12:00 am
+
+not many inital thoughts, but what I am looking to do is focus on extensive testing using both the predefined example mazes and the randomly generated mazes from test.pl. nsive testing using both the predefined example mazes and the randomly generated mazes from test.pl. The goal is to confirm that both verification and search modes of find_exit/2 behave exactly as expected across valid, invalid, and edge-case mazes.
