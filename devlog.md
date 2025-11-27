@@ -44,3 +44,7 @@ not many inital thoughts, but what I am looking to do is focus on extensive test
 Nov 27: 12:53 am
 
 Finished up testing, seems to be working fine, ill do a final checkup next session. After that I will submit if I find no errors or missing requirements.
+
+Nov 27: 1:44pm
+
+I added a README.md file to show how to run the program, when running sometimes I get warnings but they aren't errors so nothing is wrong with the code itself.
